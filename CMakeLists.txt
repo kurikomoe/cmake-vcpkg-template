@@ -15,7 +15,8 @@ set(CMAKE_CXX_FLAGS_RELEASE "-flto -O3 -Wall -Werror")
 
 set(TARGET "main")
 set(TARGET_OUTPUT_NAME "main")
-file(GLOB SRC CONFIGURE_DEPENDS src/*.cpp)
-add_executable(${TARGET} ${SRC})
+file(GLOB TARGET_SRC CONFIGURE_DEPENDS src/*.cpp)  # glob is not recommended
+# set(TARGET_SRC  src/main.cpp)
+add_executable(${TARGET} ${TARGET_SRC})
 set_target_properties(${TARGET} PROPERTIES OUTPUT_NAME ${TARGET_OUTPUT_NAME})
 target_include_directories(${TARGET} PUBLIC ${CMAKE_SOURCE_DIR}/include)

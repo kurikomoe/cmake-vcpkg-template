@@ -7,7 +7,7 @@ init:
     bash ./scripts/init_linux.sh
 
 clean:
-    rm -rf .build
+    rm -rf build
 
 config:
     cmake --preset {{preset}}
@@ -15,5 +15,5 @@ config:
 build:
     cmake --build --preset {{preset}}
 
-run:
-    ./.build/{{preset}}/{{target}}
+@run:
+    ./build/{{preset}}/bin/{{target}}

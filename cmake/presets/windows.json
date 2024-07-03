@@ -14,19 +14,6 @@
             }
         },
         {
-            "name": "x86-debug-msvc",
-            "inherits": "config-base-windows",
-            "generator": "",
-            "architecture":{
-                "value": "x86",
-                "strategy": "external"
-            },
-            "cacheVariables": {
-                "CMAKE_BUILD_TYPE" : "Debug",
-                "CMAKE_GENERATOR_PLATFORM": "Win32"
-            }
-        },
-        {
             "name": "x64-debug-msvc",
             "inherits": "config-base-windows",
             "generator": "",
@@ -40,15 +27,28 @@
             }
         },
         {
-            "name": "x86-release-msvc",
-            "inherits": "x86-debug-msvc",
+            "name": "x64-release-msvc",
+            "inherits": "x64-debug-msvc",
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE" : "Release"
             }
         },
         {
-            "name": "x64-release-msvc",
-            "inherits": "x64-debug-msvc",
+            "name": "x86-debug-msvc",
+            "inherits": "config-base-windows",
+            "generator": "",
+            "architecture":{
+                "value": "x86",
+                "strategy": "external"
+            },
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE" : "Debug",
+                "CMAKE_GENERATOR_PLATFORM": "Win32"
+            }
+        },
+        {
+            "name": "x86-release-msvc",
+            "inherits": "x86-debug-msvc",
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE" : "Release"
             }

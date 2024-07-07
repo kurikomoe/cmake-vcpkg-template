@@ -46,11 +46,17 @@ Checks: >
   -readability-redundant-declaration,
   -readability-magic-numbers,
   -readability-identifier-length,
-  -modernize-use-nodiscard,                       # [[nodiscard]] for const func
-  -bugprone-easily-swappable-parameters,    # I cannot avoid this fn(i32, i32)
-  -modernize-avoid-c-arrays,                # CArray is sometimes useful for reverse engineering
-  -readability-redundant-control-flow,  # What can i say
-  -google-build-using-namespace,        # I know, but sometimes I need this.
+  -modernize-use-nodiscard,
+  -bugprone-easily-swappable-parameters,
+  -modernize-avoid-c-arrays,
+  -readability-redundant-control-flow,
+  -google-build-using-namespace,
+
+# -modernize-use-nodiscard: [[nodiscard]] for const func
+# -bugprone-easily-swappable-parameters: I cannot avoid this fn(i32, i32)
+# -modernize-avoid-c-arrays: CArray is sometimes useful for reverse engineering
+# -readability-redundant-control-flow: What can i say
+# -google-build-using-namespace: I know, but sometimes I need this.
 
 # Turn all the warnings from the checks above into errors.
 # WarningsAsErrors: "*"

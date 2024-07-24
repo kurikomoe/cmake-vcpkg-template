@@ -3,7 +3,10 @@ cmake_minimum_required(VERSION 3.25.0)
 set(CMAKE_TOOLCHAIN_FILE ${CMAKE_SOURCE_DIR}/vcpkg/scripts/buildsystems/vcpkg.cmake CACHE STRING "")
 set(CMAKE_EXPORT_COMPILE_COMMANDS true)
 
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/")
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+
+include(AutoCCache)
 
 project(KProject)
 

@@ -1,3 +1,5 @@
+TEMPLATE_VER := "v1.0.0"
+
 # use `just preset=x64-release config build` to override this
 preset := "x64-debug"
 target := "main"
